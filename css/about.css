@@ -1,0 +1,134 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4b0082;
+    padding: 20px;
+    color: white;
+}
+
+.logo h3 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.active a {
+    font-weight: bold;
+}
+
+/* Style for menu toggle */
+.menu-toggle {
+    display: none;
+}
+
+/* Style for about section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.about .kiri {
+    flex: 1;
+}
+
+.about .kanan {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-1 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.face img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.bio {
+    margin-top: 10px;
+}
+
+.motivasi {
+    margin-top: 10px;
+}
+
+/* Style for footer */
+.footer {
+    background-color: #4b0082;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h3 {
+    margin: 0;
+}
+
+.social {
+    text-align: center;
+}
+
+.sosmed a {
+    color: white;
+    margin-right: 10px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar ul.show li {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,634 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #000;
+    background-color: #d9eaf2;
+}
+
+.navbar{
+    display: flex;
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 15px -7px rgba(0, 0, 0, 0.3);
+    position: fixed;
+}
+
+.navbar .logo{
+    margin-left: -100px;
+    font-family: 'Fredoka one', cursive;
+    font-size: 1.3em;
+    color: #4b0082;
+    cursor: pointer;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+    margin-right: -170px;
+}
+
+.navbar ul li a{
+    position: relative;
+    text-decoration: none;
+    color: #434343;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover {
+    color: #4b0082;
+}
+
+.menu-toggel{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggel input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggel span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.menu-toggel span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggel span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggel input:checked ~ span:nth-child(2){
+    transform:rotate(45deg) translate(-1px, -1px);
+    background-color: #4b0082;
+}
+
+.menu-toggel input:checked ~ span:nth-child(4){
+    transform:rotate(-45deg) translate(-1px, 0);
+    background-color: #4b0082;
+}
+
+.menu-toggel input:checked ~ span:nth-child(3){
+    transform:scale(0);
+}
+
+.container-satu{
+    margin: 75px auto;
+    margin-bottom: 600px;
+    width: 90%;
+    height: 85vh;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.col-1{
+    width: 300px;
+    height: 300px;
+    flex: 2;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.col-1 h5{
+    font-size: 1.5em;
+    font-family: 'patrick hand', cursive;
+    font-weight: 600;
+}
+
+.col-1 h3{
+    font-family: 'fredoka one', cursive;
+    font-size: 3.5em;
+    color: #4b0082;
+    margin-top: -13px;
+}
+
+.col-1 .mn{
+    font-family: 'fredoka one', cursive;
+    font-size: 1.07em;
+    color: #4b0082;
+    letter-spacing: 0.2px;
+    margin-top: -10px;
+}
+
+.col-1 .bcd{
+    font-family: Verdana;
+    font-size: 0.75em;
+    margin: 5px auto 55px;
+}
+
+.name-web button{
+    background-color: #4b0082;
+    border: 2px solid #4b0082;
+    height: 23px;
+    width: 75px;
+    border-radius: 10px;
+    margin-right: 15px;
+    transition: .3s;
+}
+
+.name-web button a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.name-web button:hover{
+    background-color: #eef9fe;
+}
+
+.name-web button a:hover{
+    color: #4b0082;
+}
+
+.col-2{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-2 img{
+    width: 80%;
+}
+
+footer{
+    display: block;
+    height: 125px;
+    width: 100%;
+    background-color: #050505;
+}
+
+.social{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.social h3{
+    font-family: 'fredoka one', cursive;
+    font-size: 1.5em;
+    color: #4b0082;
+    cursor: default;
+}
+
+.social p{
+    font-family: 'fredoka one', cursive;
+    font-size: 0.45em;
+    color: #fff;
+    font-weight: 100;
+    margin-top: -1px;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+.social a{
+    color: #fff;
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    height: 25px;
+    font-size: 0.5em;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    cursor: default;
+}
+
+.div {
+    background-image: url('image/sunlet.jpg');
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 75px;
+}
+
+.gallery .judul-1{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'yesteryear', cursive;
+    font-size: 1.7em;
+    cursor: default;
+}
+
+.gallery .bagian-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+}
+
+.bagian-1 .gambar{
+    height: 127px;
+    width: 220px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 3px;
+    outline: 2px solid #4b0082;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.gambar :hover{
+    transform: scale(1.1);
+    outline: 2px solid #000;
+}
+
+.gambar img{
+    width: 100%;
+}
+
+.gallery .judul-2{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #d9eaf2;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-family: 'yesteryear', cursive;
+    font-size: 1.7em;
+    cursor: default;
+}
+
+.gallery .bagian-2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 280px;
+    background-color: #d9eaf2;
+}
+
+.bagian-2 .video{
+    height: 322px;
+    width: 180px;
+    margin: 10px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 3px;
+    outline: 2px solid #4b0082;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.video :hover{
+    transform: scale(1.1);
+    outline: 2px solid #000;
+}
+
+.video video{
+    width: 100%;
+}
+
+.about{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about .kiri{
+    width: 100%;
+    height: 75px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.kiri .member:hover{
+    box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.3), 2px 2px 2px rgba(0, 0, 0, 0.2), 7px 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+.kiri .member{
+    background-color: #4b0082;
+    height: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0;
+    color: #fff;
+    font-family: 'valera round', sans-serif;
+    box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about .kanan{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: .3s;
+    font-family: 'valera round', sans-serif;
+    box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kanan .card-1:hover{
+    box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.3), 2px 2px 2px rgba(0, 0, 0, 0.2), 7px 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-1 .face{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.face img{
+    outline: 1.5px solid #4b0082;
+    padding: 2px;
+    border-radius: 50%;
+    width: 80%;
+}
+
+.card-1 .bio{
+    flex: 2;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.bio.data.satu{
+    margin: 5px 0 3px 10px;
+    font-weight: 800;
+}
+
+.bio .share{
+    margin-top: 13px;
+    display: flex;
+    width: 100%;
+}
+
+.share i{
+    font-size: 0.8em;
+    letter-spacing: 8px;
+}
+
+.share .collect{
+    margin-left: 110;
+}
+
+.fa-heart:hover{
+    color: red;
+    font-weight: 800;
+}
+
+.bio p{
+    font-size: 0.6em;
+    margin-top: 5px;
+    font-weight: 600;
+    color: #0000009c;
+}
+
+.card-1 .motivasi{
+    box-sizing: border-box;
+    padding: 10px;
+    height: 70px;
+    font-size: 0.8em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -7px;
+}
+
+.contact{
+    position: relative;
+    margin-bottom: 15px 75px auto auto;
+    width: 95%;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.contact .kotak{
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: -30px;
+    font-size: 1.1em;
+    color: #000000c1;
+    display: flex;
+    justify-content: center;
+}
+
+.kotak .input{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    border: 1.5px solid #3333335d;
+    border-radius: 5px;
+    background-color: #fafbfb;
+    margin: 3px 0 10px 0;
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.input.tiga{
+    height: 100px;
+}
+
+.kotak .label{
+    position: absolute;
+    z-index: 1;
+    font-family: 'patrick hand', cursive;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #000000b7;
+    margin: -37px 0 0 10px;
+    width: 35px;
+    text-align: center;
+    background-color: #fafbfb;
+    transition: .3s;
+    cursor: text;
+}
+
+.label.pesan{
+    margin-top: -105PX;
+}
+
+.input:focus +.label{
+    margin: -50px 0 0 7px;
+    font-size: 0.8em;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.input:focus +.label.pesan{
+    margin: -118px 0 0 7px;
+}
+
+.input:focus{
+    border: 1px solid #4b0082;
+}
+
+.kotak .submit{
+    margin-top: 8px;
+    width: 60px;
+    background-color: #4b0082;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    font-family: 'patrick hand', cursive;
+    font-size: 1.25em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.3), 5px 5px 5px rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit:hover{
+    background-color: #4b0082;
+    box-shadow: -1px -1px 1px rgba(255, 255, 255, 0.3), 2px 2px 2px rgba(0, 0, 0, 0.2), 7px 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:1080px){
+    .navbar .logo{
+        margin-left: 2%;
+    }
+    .navbar ul{
+        width: 43%;
+        margin-right: -70px;
+    }
+
+    .container-satu{
+        height: 700px;
+        align-items: flex-start;
+    }
+
+    .col-1{
+        order: 1;
+        height: 210px;
+        margin-bottom: -50px;
+    }
+
+    .col-2{
+        height: 350px;
+    }
+
+    .about .kanan{
+    width: 100%;
+    height: 100%;
+}
+}
+
+
+@media(mas-width:768px){
+    .navbar{
+        z-index: 3;
+    }
+
+    .navbar ul li a:hover{
+        color: #fff;
+        border-radius: 10px;
+        padding: 5px 25px;
+    }
+
+    .navbar .logo{
+        margin-left: -30px;
+    }
+
+    .navbar .menu-toggel{
+        margin-right: -15%;
+    }
+
+    .menu{
+        order: -1;
+        justify-items: end;
+    }
+
+    .menu-toggel{
+        display: flex;
+        z-index: 2;
+    }
+
+    .navbar ul{
+        display: none;
+    }
+
+    .navbar ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        text-align: center;
+        right: 10.5vh;
+        top: 50px;
+        height: 93vh;
+        z-index: 1;
+        background: linear-gradient(45deg, #ff00ff, #4b0082);
+        width: 100%;
+        transform: translatex(-100%);
+        transition: all 0.5s;
+    }
+
+    .navbar ul.slide{
+        transform: translatex(0);
+    }
+
+    .navbar ul li a{
+        color: white;
+    }
+}

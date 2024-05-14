@@ -1,0 +1,116 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* warna navbar */
+    padding: 10px 20px;
+}
+
+.navbar .logo h3 {
+    color: #fff; /* warna teks logo */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff; /* warna teks tautan */
+}
+
+.navbar ul li.active a {
+    font-weight: bold; /* styling untuk tautan aktif */
+}
+
+.menu-toggel {
+    display: none;
+}
+
+/* Contact form styling */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contact .kotak {
+    background-color: #fff; /* warna background form */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact .kotak form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .kotak form .input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc; /* warna border input */
+    border-radius: 5px;
+}
+
+.contact .kotak form .input:focus {
+    outline: none;
+    border-color: #4b0082; /* warna border input saat difokuskan */
+}
+
+.contact .kotak form .label {
+    margin-bottom: 5px;
+}
+
+.contact .kotak form .submit {
+    padding: 10px;
+    background-color: #4b0082; /* warna background tombol kirim */
+    color: #fff; /* warna teks tombol kirim */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact .kotak form .submit:hover {
+    background-color: #2d0043; /* warna saat tombol kirim dihover */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333; /* warna background footer */
+    color: #fff; /* warna teks footer */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .social {
+    text-align: center;
+}
+
+.footer .sosmed a {
+    color: #fff; /* warna ikon sosial media */
+    margin-right: 10px;
+}
+
+.footer .copyright {
+    text-align: center;
+}

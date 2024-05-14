@@ -1,0 +1,97 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #4b0082; /* Change to your preferred color */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'fredoka one', cursive;
+}
+
+.navbar .logo h3 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar ul li.active a {
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Gallery section styling */
+.gallery {
+    padding: 20px;
+}
+
+.judul-1,
+.judul-2 {
+    margin-bottom: 20px;
+}
+
+.bagian-1,
+.bagian-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gambar img,
+.video video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333; /* Change to your preferred color */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social {
+    margin-bottom: 20px;
+}
+
+.footer .social h3 {
+    margin: 0;
+}
+
+.footer .social p {
+    margin-bottom: 10px;
+}
+
+.footer .sosmed a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
